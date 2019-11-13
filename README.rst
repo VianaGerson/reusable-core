@@ -1,13 +1,13 @@
 =====
-Django Kong Core
+Django Reusable Core
 =====
 
-Django Kong Core é uma aplicação base para transforçar os cabeçalhos da requisição do kong em modelo mapeado.
+Django Reusable Core é uma aplicação base ser usada em varios microserviços. O mesmo conta com funcionalidades genericas.
 
 Quick start
 -----------
 
-1. Add "django-kong-core" to your INSTALLED_APPS setting like this::
+1. Add "django-reusable-core" to your INSTALLED_APPS setting like this::
 
     INSTALLED_APPS = [
         ...
@@ -19,7 +19,7 @@ Quick start
     MIDDLEWARE = [
         ...
         'django.contrib.auth.middleware.AuthenticationMiddleware',        
-        'apps.reusable_core.middleware.KongClientMiddleware',
+        'apps.reusable_core.middleware.ReusableClientMiddleware',
         ...
     ]
 
