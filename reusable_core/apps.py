@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class KongCoreConfig(AppConfig):
+class ReusableCoreConfig(AppConfig):
     name = 'reusable_core'
