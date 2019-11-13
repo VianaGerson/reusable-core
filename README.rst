@@ -23,6 +23,6 @@ Quick start
         ...
     ]
 
-3. Run `python manage.py migrate` to create the django-kong-core models.
+3. Run `python manage.py migrate` to create the django-reusable-core models.
 
 4. enjoy it!
