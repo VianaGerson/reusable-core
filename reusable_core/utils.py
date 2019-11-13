@@ -17,9 +17,9 @@ def get_user_type(x_authenticated_userid):
 
     try:
         data = {
-            'query': 'query{getUser(id:"' + str(x_authenticated_userid) + '"){ tipoUsuario }}'}
+            'query': 'query{getUser(id:"' + str(x_authenticated_userid) + '"){ userType }}'}
         response = requests.post(url, data=data, headers={}, verify=False)
-        user_type = response.json()['data']['getUser']['tipoUsuario']
+        user_type = response.json()['data']['getUser']['userType']
     except Exception as e:
         print(e)
 

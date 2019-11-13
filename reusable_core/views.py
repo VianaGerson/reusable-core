@@ -24,7 +24,7 @@ class SafeGraphQLView(GraphQLView):
             
             if isinstance(error.original_error, PermissionDenied):
                 data.update({
-                    'message': _("Você não tem permissão para realizar essa ação!"),
+                    'message': _("You are not allowed to perform this action!"),
                     'statusCode': 401
                 })
                 
@@ -36,7 +36,8 @@ class SafeGraphQLView(GraphQLView):
 
             if isinstance(error.original_error, ObjectDoesNotExist):
                 data.update({
-                    'message': _("Não existe resultado correspondente para esta consulta."),
+                    'message': _("There is no matching result for this query."),
+                    'message_base': str(error),
                     'statusCode': 404
                 })
             
@@ -51,7 +52,7 @@ class SafeGraphQLView(GraphQLView):
         elif isinstance(error, GraphQLError):
             print("\n\n\nGraphQLError\n\n\n")
             data.update({
-                'message': 'Ocorreu uma falha durante esta operação. Por favor verifique se está tudo certo. Se o problema persistir entre em contato com o suporte!',
+                'message': _('A failure occurred during this operation. Please make sure everything is alright. If the problem persists contact support!'),
                 'message_base': str(error),
                 'statusCode': 500
             })         

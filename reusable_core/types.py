@@ -5,26 +5,21 @@ from reusable_core.connections import TotalItemsConnection
 class UserRemoteType(graphene.ObjectType):
     id = graphene.ID()
     email = graphene.String()
-    fullName = graphene.String()
     cpf = graphene.String()
-    telefone = graphene.String()
+    phone = graphene.String()
     username = graphene.String()
-    firstName = graphene.String()
-    lastName = graphene.String()
-    dataNascimento = graphene.String()
+    birthDate = graphene.String()
     cep = graphene.String()
-    rua = graphene.String()
-    numero = graphene.Int()
-    bairro = graphene.String()
-    complemento = graphene.String()
-    cidadeName = graphene.String()
-    cidadeEstadoName = graphene.String()
-    tipoUsuario = graphene.String()
+    street = graphene.String()
+    number = graphene.Int()
+    neighborhood = graphene.String()
+    complement = graphene.String()
+    cityName = graphene.String()
+    cityStateName = graphene.String()
+    userType = graphene.String()
 
     class Meta:
-        fields = ['id', 'email', 'fullName', 'cpf', 'telefone', 'username',
-                  'firstName', 'lastName' 'dataNascimento', 'cep', 'rua',
-                  'numero', 'bairro', 'complemento', 'cidadeName', 'cidadeEstadoName',
-                  'tipoUsuario', ]
+        fields = ['id', 'email', 'cpf', 'phone', 'username', 'birthDate', 'cep', 'street',
+                  'number', 'neighborhood', 'complement', 'cityName', 'cityStateName', 'userType', ]
         connection_class = TotalItemsConnection
         use_connection = True

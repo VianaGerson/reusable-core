@@ -35,7 +35,7 @@ def create_mo_files():
 
 setup(
     name='django-reusable-core',
-    version='0.0.0.2',
+    version='0.0.0.1',
     license='BSD License',  # example license
     description='Django Kong Core',
     long_description=README,

@@ -3,7 +3,7 @@ from .models import Client
 from .utils import get_user_type
 
 
-class KongClientMiddleware(MiddlewareMixin):
+class ReusableClientMiddleware(MiddlewareMixin):
     def process_request(self, request):
         headers = request.headers
 
