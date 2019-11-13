@@ -11,7 +11,7 @@ Quick start
 
     INSTALLED_APPS = [
         ...
-        'kong_core',
+        'reusable_core',
     ]
 
 2. Include the middleware in middleware settings.py like this::
@@ -19,7 +19,7 @@ Quick start
     MIDDLEWARE = [
         ...
         'django.contrib.auth.middleware.AuthenticationMiddleware',        
-        'apps.kong_core.middleware.KongClientMiddleware',
+        'apps.reusable_core.middleware.KongClientMiddleware',
         ...
     ]
 

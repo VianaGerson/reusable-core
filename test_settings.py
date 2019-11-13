@@ -9,7 +9,7 @@ EXTERNAL_APPS = [
 ]
 
 MY_APPS = [
-    'kong_core',
+    'reusable_core',
 ]
 
 INSTALLED_APPS = INTERNAL_APPS + EXTERNAL_APPS + MY_APPS

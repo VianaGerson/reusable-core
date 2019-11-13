@@ -1,5 +1,5 @@
 import graphene
-from kong_core.connections import TotalItemsConnection
+from reusable_core.connections import TotalItemsConnection
 
 
 class UserRemoteType(graphene.ObjectType):

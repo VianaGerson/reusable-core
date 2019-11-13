@@ -13,7 +13,7 @@ with open('requirements/requirements.txt') as f:
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
-name = 'kong_core'
+name = 'reusable_core'
 PO_FILES = name + '/locale/*/LC_MESSAGES/django.po'
 
 # Compiled translations are not distributed via github (by default),
